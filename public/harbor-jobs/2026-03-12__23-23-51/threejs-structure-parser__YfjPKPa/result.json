@@ -1,0 +1,105 @@
+{
+    "id": "7fec7800-27fb-4ed4-82a3-a143c49ee9bc",
+    "task_name": "threejs-structure-parser",
+    "trial_name": "threejs-structure-parser__YfjPKPa",
+    "trial_uri": "file:///Users/zhengxi.li/Documents/research/agent_eval/harbor/jobs/2026-03-12__23-23-51/threejs-structure-parser__YfjPKPa",
+    "task_id": {
+        "path": "datasets/skillsbench/tasks/threejs-structure-parser"
+    },
+    "source": "tasks",
+    "task_checksum": "980a09a98941bc786e32e35ad01f2301e02f679d8c209f78e93275db27653236",
+    "config": {
+        "task": {
+            "path": "datasets/skillsbench/tasks/threejs-structure-parser",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "threejs-structure-parser__YfjPKPa",
+        "trials_dir": "jobs/2026-03-12__23-23-51",
+        "timeout_multiplier": 3.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.terminus_agent.agents.terminus_2.harbor_terminus_2_skills:HarborTerminus2WithSkills",
+            "model_name": "openrouter/openai/gpt-oss-120b",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {
+                "api_base": "https://openrouter.ai/api/v1",
+                "api_key": "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"
+            },
+            "env": {}
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": true,
+            "delete": true,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "kwargs": {}
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "5c27d713-f6f9-40cf-b22a-9a04a8fbc160"
+    },
+    "agent_info": {
+        "name": "terminus-2-skills",
+        "version": "2.0.0",
+        "model_info": {
+            "name": "openai/gpt-oss-120b",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 17223,
+        "n_cache_tokens": null,
+        "n_output_tokens": 2736,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": {
+            "skills_loaded": [
+                "threejs"
+            ],
+            "references_loaded": []
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-03-12T17:00:40.402101Z",
+    "finished_at": "2026-03-12T17:31:56.931655Z",
+    "environment_setup": {
+        "started_at": "2026-03-12T17:00:40.406657Z",
+        "finished_at": "2026-03-12T17:07:44.073570Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-03-12T17:07:44.073585Z",
+        "finished_at": "2026-03-12T17:07:47.648167Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-03-12T17:07:47.648269Z",
+        "finished_at": "2026-03-12T17:28:26.259472Z"
+    },
+    "verifier": {
+        "started_at": "2026-03-12T17:28:26.259575Z",
+        "finished_at": "2026-03-12T17:30:49.779418Z"
+    }
+}

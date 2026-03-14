@@ -1,0 +1,103 @@
+{
+    "id": "e1874642-acd1-424e-b72c-2e98a5013008",
+    "task_name": "court-form-filling",
+    "trial_name": "court-form-filling__LEJLBcU",
+    "trial_uri": "file:///Users/zhengxi.li/Documents/research/agent_eval/harbor/jobs/2026-03-14__10-00-39/court-form-filling__LEJLBcU",
+    "task_id": {
+        "path": "datasets/skillsbench/tasks/court-form-filling"
+    },
+    "source": "tasks",
+    "task_checksum": "a23270a0d5d8f22a1a88182521649a43df016852e4153068ca364cbc6b4cb665",
+    "config": {
+        "task": {
+            "path": "datasets/skillsbench/tasks/court-form-filling",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "court-form-filling__LEJLBcU",
+        "trials_dir": "jobs/2026-03-14__10-00-39",
+        "timeout_multiplier": 3.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.terminus_agent.agents.terminus_2.harbor_terminus_2_skills:HarborTerminus2WithSkills",
+            "model_name": "openrouter/qwen/qwen3.5-35b-a3b",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {
+                "api_base": "https://openrouter.ai/api/v1",
+                "api_key": "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"
+            },
+            "env": {}
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": true,
+            "delete": true,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "kwargs": {}
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "ce1cbef5-6f33-48d4-ad82-cb70eaf3dc74"
+    },
+    "agent_info": {
+        "name": "terminus-2-skills",
+        "version": "2.0.0",
+        "model_info": {
+            "name": "qwen/qwen3.5-35b-a3b",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 985482,
+        "n_cache_tokens": null,
+        "n_output_tokens": 17175,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": {
+            "skills_loaded": [],
+            "references_loaded": []
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-03-14T03:00:31.106757Z",
+    "finished_at": "2026-03-14T03:19:13.198262Z",
+    "environment_setup": {
+        "started_at": "2026-03-14T03:00:31.112942Z",
+        "finished_at": "2026-03-14T03:11:58.368864Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-03-14T03:11:58.368886Z",
+        "finished_at": "2026-03-14T03:12:14.681694Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-03-14T03:12:14.681790Z",
+        "finished_at": "2026-03-14T03:19:02.217297Z"
+    },
+    "verifier": {
+        "started_at": "2026-03-14T03:19:02.217404Z",
+        "finished_at": "2026-03-14T03:19:11.566138Z"
+    }
+}

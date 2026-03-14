@@ -1,0 +1,103 @@
+{
+    "id": "8cfcea78-0caa-4c92-a3e9-2066cc4e42ce",
+    "task_name": "invoice-fraud-detection",
+    "trial_name": "invoice-fraud-detection__FCnwk8w",
+    "trial_uri": "file:///Users/zhengxi.li/Documents/research/agent_eval/harbor/jobs/2026-03-13__23-23-09/invoice-fraud-detection__FCnwk8w",
+    "task_id": {
+        "path": "datasets/skillsbench/tasks/invoice-fraud-detection"
+    },
+    "source": "tasks",
+    "task_checksum": "ae3722819c9bb3ffd0e1c53160f428218a3e69889bc7c6849ee83a2a8d65550d",
+    "config": {
+        "task": {
+            "path": "datasets/skillsbench/tasks/invoice-fraud-detection",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "invoice-fraud-detection__FCnwk8w",
+        "trials_dir": "jobs/2026-03-13__23-23-09",
+        "timeout_multiplier": 3.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.terminus_agent.agents.terminus_2.harbor_terminus_2_skills:HarborTerminus2WithSkills",
+            "model_name": "openrouter/qwen/qwen3.5-35b-a3b",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {
+                "api_base": "https://openrouter.ai/api/v1",
+                "api_key": "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"
+            },
+            "env": {}
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": true,
+            "delete": true,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "kwargs": {}
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "f43882a9-dcba-4bd4-8735-2af989a5e765"
+    },
+    "agent_info": {
+        "name": "terminus-2-skills",
+        "version": "2.0.0",
+        "model_info": {
+            "name": "qwen/qwen3.5-35b-a3b",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 341885,
+        "n_cache_tokens": null,
+        "n_output_tokens": 3381,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": {
+            "skills_loaded": [],
+            "references_loaded": []
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-03-13T16:26:09.994894Z",
+    "finished_at": "2026-03-13T16:45:37.160522Z",
+    "environment_setup": {
+        "started_at": "2026-03-13T16:26:10.003769Z",
+        "finished_at": "2026-03-13T16:32:48.468847Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-03-13T16:32:48.468862Z",
+        "finished_at": "2026-03-13T16:37:26.750158Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-03-13T16:37:26.750233Z",
+        "finished_at": "2026-03-13T16:43:49.961592Z"
+    },
+    "verifier": {
+        "started_at": "2026-03-13T16:43:49.961667Z",
+        "finished_at": "2026-03-13T16:44:00.698858Z"
+    }
+}

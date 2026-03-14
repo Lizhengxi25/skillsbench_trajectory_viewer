@@ -1,0 +1,103 @@
+{
+    "id": "919f7557-35f1-4c83-9624-dbe33d9554da",
+    "task_name": "gravitational-wave-detection",
+    "trial_name": "gravitational-wave-detection__jo4SwoE",
+    "trial_uri": "file:///Users/zhengxi.li/Documents/research/agent_eval/harbor/jobs/2026-03-12__23-23-51/gravitational-wave-detection__jo4SwoE",
+    "task_id": {
+        "path": "datasets/skillsbench/tasks/gravitational-wave-detection"
+    },
+    "source": "tasks",
+    "task_checksum": "f90fd4c71f430bee7bea77b86134b72a2c17bc77c76e0aa696d7e33a804a50a6",
+    "config": {
+        "task": {
+            "path": "datasets/skillsbench/tasks/gravitational-wave-detection",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "gravitational-wave-detection__jo4SwoE",
+        "trials_dir": "jobs/2026-03-12__23-23-51",
+        "timeout_multiplier": 3.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.terminus_agent.agents.terminus_2.harbor_terminus_2_skills:HarborTerminus2WithSkills",
+            "model_name": "openrouter/openai/gpt-oss-120b",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {
+                "api_base": "https://openrouter.ai/api/v1",
+                "api_key": "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"
+            },
+            "env": {}
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": true,
+            "delete": true,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "kwargs": {}
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "5c27d713-f6f9-40cf-b22a-9a04a8fbc160"
+    },
+    "agent_info": {
+        "name": "terminus-2-skills",
+        "version": "2.0.0",
+        "model_info": {
+            "name": "openai/gpt-oss-120b",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 1178,
+        "n_cache_tokens": null,
+        "n_output_tokens": 985,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": {
+            "skills_loaded": [],
+            "references_loaded": []
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-03-12T19:08:24.030615Z",
+    "finished_at": "2026-03-12T19:20:52.802246Z",
+    "environment_setup": {
+        "started_at": "2026-03-12T19:08:24.036269Z",
+        "finished_at": "2026-03-12T19:20:17.576625Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-03-12T19:20:17.576650Z",
+        "finished_at": "2026-03-12T19:20:18.037826Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-03-12T19:20:18.037899Z",
+        "finished_at": "2026-03-12T19:20:50.445766Z"
+    },
+    "verifier": {
+        "started_at": "2026-03-12T19:20:50.445855Z",
+        "finished_at": "2026-03-12T19:20:51.137694Z"
+    }
+}

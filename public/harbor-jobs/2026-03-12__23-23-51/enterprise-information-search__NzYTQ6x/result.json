@@ -1,0 +1,98 @@
+{
+    "id": "589876de-24a0-4c0c-b900-fb3a220fb2db",
+    "task_name": "enterprise-information-search",
+    "trial_name": "enterprise-information-search__NzYTQ6x",
+    "trial_uri": "file:///Users/zhengxi.li/Documents/research/agent_eval/harbor/jobs/2026-03-12__23-23-51/enterprise-information-search__NzYTQ6x",
+    "task_id": {
+        "path": "datasets/skillsbench/tasks/enterprise-information-search"
+    },
+    "source": "tasks",
+    "task_checksum": "e5cdefb9e11d4a9bfeb9906940822f060831b13e54bb56ce4a9596051b35c09b",
+    "config": {
+        "task": {
+            "path": "datasets/skillsbench/tasks/enterprise-information-search",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "enterprise-information-search__NzYTQ6x",
+        "trials_dir": "jobs/2026-03-12__23-23-51",
+        "timeout_multiplier": 3.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.terminus_agent.agents.terminus_2.harbor_terminus_2_skills:HarborTerminus2WithSkills",
+            "model_name": "openrouter/openai/gpt-oss-120b",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {
+                "api_base": "https://openrouter.ai/api/v1",
+                "api_key": "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"
+            },
+            "env": {}
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": true,
+            "delete": true,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "kwargs": {}
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "5c27d713-f6f9-40cf-b22a-9a04a8fbc160"
+    },
+    "agent_info": {
+        "name": "terminus-2-skills",
+        "version": "2.0.0",
+        "model_info": {
+            "name": "openai/gpt-oss-120b",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": null,
+    "exception_info": {
+        "exception_type": "RetryError",
+        "exception_message": "RetryError[<Future at 0x12a5b4e50 state=finished raised BadRequestError>]",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"/Users/zhengxi.li/Documents/research/agent_eval/harbor/.venv/lib/python3.13/site-packages/litellm/llms/custom_httpx/llm_http_handler.py\", line 221, in _make_common_sync_call\n    response = sync_httpx_client.post(\n        url=api_base,\n    ...<8 lines>...\n        logging_obj=logging_obj,\n    )\n  File \"/Users/zhengxi.li/Documents/research/agent_eval/harbor/.venv/lib/python3.13/site-packages/litellm/llms/custom_httpx/http_handler.py\", line 1028, in post\n    raise e\n  File \"/Users/zhengxi.li/Documents/research/agent_eval/harbor/.venv/lib/python3.13/site-packages/litellm/llms/custom_httpx/http_handler.py\", line 1010, in post\n    response.raise_for_status()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/Users/zhengxi.li/Documents/research/agent_eval/harbor/.venv/lib/python3.13/site-packages/httpx/_models.py\", line 829, in raise_for_status\n    raise HTTPStatusError(message, request=request, response=self)\nhttpx.HTTPStatusError: Client error '400 Bad Request' for url 'https://openrouter.ai/api/v1/chat/completions'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/Users/zhengxi.li/Documents/research/agent_eval/harbor/.venv/lib/python3.13/site-packages/litellm/main.py\", line 3212, in completion\n    response = base_llm_http_handler.completion(\n        model=model,\n    ...<14 lines>...\n        client=client,\n    )\n  File \"/Users/zhengxi.li/Documents/research/agent_eval/harbor/.venv/lib/python3.13/site-packages/litellm/llms/custom_httpx/llm_http_handler.py\", line 524, in completion\n    response = self._make_common_sync_call(\n        sync_httpx_client=sync_httpx_client,\n    ...<7 lines>...\n        logging_obj=logging_obj,\n    )\n  File \"/Users/zhengxi.li/Documents/research/agent_eval/harbor/.venv/lib/python3.13/site-packages/litellm/llms/custom_httpx/llm_http_handler.py\", line 246, in _make_common_sync_call\n    raise self._handle_error(e=e, provider_config=provider_config)\n          ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/zhengxi.li/Documents/research/agent_eval/harbor/.venv/lib/python3.13/site-packages/litellm/llms/custom_httpx/llm_http_handler.py\", line 4505, in _handle_error\n    raise provider_config.get_error_class(\n    ...<3 lines>...\n    )\nlitellm.llms.openrouter.common_utils.OpenRouterException: {\"error\":{\"message\":\"This endpoint's maximum context length is 131072 tokens. However, you requested about 252507 tokens (252507 of text input). Please reduce the length of either one, or use the \\\"middle-out\\\" transform to compress your prompt automatically.\",\"code\":400,\"metadata\":{\"provider_name\":null}}}\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/Users/zhengxi.li/Documents/research/agent_eval/harbor/.venv/lib/python3.13/site-packages/tenacity/__init__.py\", line 480, in __call__\n    result = fn(*args, **kwargs)\n  File \"/Users/zhengxi.li/Documents/research/agent_eval/harbor/datasets/skillsbench/libs/terminus_agent/llms/lite_llm.py\", line 170, in call\n    raise e\n  File \"/Users/zhengxi.li/Documents/research/agent_eval/harbor/datasets/skillsbench/libs/terminus_agent/llms/lite_llm.py\", line 153, in call\n    response = litellm.completion(\n        model=self._model_name,\n    ...<7 lines>...\n        **kwargs,\n    )\n  File \"/Users/zhengxi.li/Documents/research/agent_eval/harbor/.venv/lib/python3.13/site-packages/litellm/utils.py\", line 1748, in wrapper\n    raise e\n  File \"/Users/zhengxi.li/Documents/research/agent_eval/harbor/.venv/lib/python3.13/site-packages/litellm/utils.py\", line 1569, in wrapper\n    result = original_function(*args, **kwargs)\n  File \"/Users/zhengxi.li/Documents/research/agent_eval/harbor/.venv/lib/python3.13/site-packages/litellm/main.py\", line 4305, in completion\n    raise exception_type(\n          ~~~~~~~~~~~~~~^\n        model=model,\n        ^^^^^^^^^^^^\n    ...<3 lines>...\n        extra_kwargs=kwargs,\n        ^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/Users/zhengxi.li/Documents/research/agent_eval/harbor/.venv/lib/python3.13/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py\", line 2378, in exception_type\n    raise e\n  File \"/Users/zhengxi.li/Documents/research/agent_eval/harbor/.venv/lib/python3.13/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py\", line 2240, in exception_type\n    raise BadRequestError(\n    ...<5 lines>...\n    )\nlitellm.exceptions.BadRequestError: litellm.BadRequestError: OpenrouterException - {\"error\":{\"message\":\"This endpoint's maximum context length is 131072 tokens. However, you requested about 252507 tokens (252507 of text input). Please reduce the length of either one, or use the \\\"middle-out\\\" transform to compress your prompt automatically.\",\"code\":400,\"metadata\":{\"provider_name\":null}}}\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/Users/zhengxi.li/Documents/research/agent_eval/harbor/src/harbor/trial/trial.py\", line 486, in run\n    await self._execute_agent()\n  File \"/Users/zhengxi.li/Documents/research/agent_eval/harbor/src/harbor/trial/trial.py\", line 261, in _execute_agent\n    await asyncio.wait_for(\n    ...<6 lines>...\n    )\n  File \"/opt/anaconda3/lib/python3.13/asyncio/tasks.py\", line 507, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/Users/zhengxi.li/Documents/research/agent_eval/harbor/datasets/skillsbench/libs/terminus_agent/agents/terminus_2/harbor_terminus_2_skills.py\", line 379, in run\n    response = chat.chat(prompt)\n  File \"/Users/zhengxi.li/Documents/research/agent_eval/harbor/datasets/skillsbench/libs/terminus_agent/llms/chat.py\", line 35, in chat\n    response = self._model.call(\n        prompt=prompt,\n    ...<2 lines>...\n        **kwargs,\n    )\n  File \"/Users/zhengxi.li/Documents/research/agent_eval/harbor/.venv/lib/python3.13/site-packages/tenacity/__init__.py\", line 338, in wrapped_f\n    return copy(f, *args, **kw)\n  File \"/Users/zhengxi.li/Documents/research/agent_eval/harbor/.venv/lib/python3.13/site-packages/tenacity/__init__.py\", line 477, in __call__\n    do = self.iter(retry_state=retry_state)\n  File \"/Users/zhengxi.li/Documents/research/agent_eval/harbor/.venv/lib/python3.13/site-packages/tenacity/__init__.py\", line 378, in iter\n    result = action(retry_state)\n  File \"/Users/zhengxi.li/Documents/research/agent_eval/harbor/.venv/lib/python3.13/site-packages/tenacity/__init__.py\", line 421, in exc_check\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x12a5b4e50 state=finished raised BadRequestError>]\n",
+        "occurred_at": "2026-03-13T03:49:19.254247"
+    },
+    "started_at": "2026-03-12T19:42:36.726516Z",
+    "finished_at": "2026-03-12T19:49:20.887406Z",
+    "environment_setup": {
+        "started_at": "2026-03-12T19:42:36.757844Z",
+        "finished_at": "2026-03-12T19:47:30.211722Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-03-12T19:47:30.211736Z",
+        "finished_at": "2026-03-12T19:47:30.788947Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-03-12T19:47:30.789033Z",
+        "finished_at": "2026-03-12T19:49:19.248377Z"
+    },
+    "verifier": null
+}

@@ -1,0 +1,103 @@
+{
+    "id": "2c034f97-380b-4788-8b05-864eff4a5bfc",
+    "task_name": "lake-warming-attribution",
+    "trial_name": "lake-warming-attribution__BEWS5Yy",
+    "trial_uri": "file:///Users/zhengxi.li/Documents/research/agent_eval/harbor/jobs/2026-03-12__23-23-51/lake-warming-attribution__BEWS5Yy",
+    "task_id": {
+        "path": "datasets/skillsbench/tasks/lake-warming-attribution"
+    },
+    "source": "tasks",
+    "task_checksum": "d4f7add8444ae8b51708f46ff4ffea8c69d4af52e1a47cd3633e70e42191f51d",
+    "config": {
+        "task": {
+            "path": "datasets/skillsbench/tasks/lake-warming-attribution",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "lake-warming-attribution__BEWS5Yy",
+        "trials_dir": "jobs/2026-03-12__23-23-51",
+        "timeout_multiplier": 3.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.terminus_agent.agents.terminus_2.harbor_terminus_2_skills:HarborTerminus2WithSkills",
+            "model_name": "openrouter/openai/gpt-oss-120b",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {
+                "api_base": "https://openrouter.ai/api/v1",
+                "api_key": "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"
+            },
+            "env": {}
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": true,
+            "delete": true,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "kwargs": {}
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "5c27d713-f6f9-40cf-b22a-9a04a8fbc160"
+    },
+    "agent_info": {
+        "name": "terminus-2-skills",
+        "version": "2.0.0",
+        "model_info": {
+            "name": "openai/gpt-oss-120b",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 1259,
+        "n_cache_tokens": null,
+        "n_output_tokens": 1790,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": {
+            "skills_loaded": [],
+            "references_loaded": []
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-03-12T17:36:58.536243Z",
+    "finished_at": "2026-03-12T17:44:38.423301Z",
+    "environment_setup": {
+        "started_at": "2026-03-12T17:36:58.541821Z",
+        "finished_at": "2026-03-12T17:43:53.136833Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-03-12T17:43:53.136845Z",
+        "finished_at": "2026-03-12T17:43:53.803003Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-03-12T17:43:53.803066Z",
+        "finished_at": "2026-03-12T17:44:16.754577Z"
+    },
+    "verifier": {
+        "started_at": "2026-03-12T17:44:16.754665Z",
+        "finished_at": "2026-03-12T17:44:25.768009Z"
+    }
+}

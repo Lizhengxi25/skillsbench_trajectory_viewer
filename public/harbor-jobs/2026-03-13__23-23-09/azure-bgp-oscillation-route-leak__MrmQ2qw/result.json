@@ -1,0 +1,103 @@
+{
+    "id": "dce0949a-804d-49d5-880a-a44ade3ca9a9",
+    "task_name": "azure-bgp-oscillation-route-leak",
+    "trial_name": "azure-bgp-oscillation-route-leak__MrmQ2qw",
+    "trial_uri": "file:///Users/zhengxi.li/Documents/research/agent_eval/harbor/jobs/2026-03-14__10-00-39/azure-bgp-oscillation-route-leak__MrmQ2qw",
+    "task_id": {
+        "path": "datasets/skillsbench/tasks/azure-bgp-oscillation-route-leak"
+    },
+    "source": "tasks",
+    "task_checksum": "fef3e59cc8d8a13e3209d3d423073da4ea50519609fbaf293e7c29d1c384f6bb",
+    "config": {
+        "task": {
+            "path": "datasets/skillsbench/tasks/azure-bgp-oscillation-route-leak",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "azure-bgp-oscillation-route-leak__MrmQ2qw",
+        "trials_dir": "jobs/2026-03-14__10-00-39",
+        "timeout_multiplier": 3.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.terminus_agent.agents.terminus_2.harbor_terminus_2_skills:HarborTerminus2WithSkills",
+            "model_name": "openrouter/qwen/qwen3.5-35b-a3b",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {
+                "api_base": "https://openrouter.ai/api/v1",
+                "api_key": "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"
+            },
+            "env": {}
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": true,
+            "delete": true,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "kwargs": {}
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "ce1cbef5-6f33-48d4-ad82-cb70eaf3dc74"
+    },
+    "agent_info": {
+        "name": "terminus-2-skills",
+        "version": "2.0.0",
+        "model_info": {
+            "name": "qwen/qwen3.5-35b-a3b",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 13142,
+        "n_cache_tokens": null,
+        "n_output_tokens": 2412,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": {
+            "skills_loaded": [],
+            "references_loaded": []
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-03-14T02:42:13.163606Z",
+    "finished_at": "2026-03-14T02:47:25.667149Z",
+    "environment_setup": {
+        "started_at": "2026-03-14T02:42:13.168236Z",
+        "finished_at": "2026-03-14T02:43:34.380619Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-03-14T02:43:34.380635Z",
+        "finished_at": "2026-03-14T02:43:37.699867Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-03-14T02:43:37.699949Z",
+        "finished_at": "2026-03-14T02:46:34.179023Z"
+    },
+    "verifier": {
+        "started_at": "2026-03-14T02:46:34.179158Z",
+        "finished_at": "2026-03-14T02:47:18.624089Z"
+    }
+}

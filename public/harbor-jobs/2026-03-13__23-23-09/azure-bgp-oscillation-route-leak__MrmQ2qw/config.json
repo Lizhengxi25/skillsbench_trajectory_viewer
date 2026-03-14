@@ -1,0 +1,49 @@
+{
+    "task": {
+        "path": "datasets/skillsbench/tasks/azure-bgp-oscillation-route-leak",
+        "git_url": null,
+        "git_commit_id": null,
+        "overwrite": false,
+        "download_dir": null,
+        "source": "tasks"
+    },
+    "trial_name": "azure-bgp-oscillation-route-leak__MrmQ2qw",
+    "trials_dir": "jobs/2026-03-14__10-00-39",
+    "timeout_multiplier": 3.0,
+    "agent_timeout_multiplier": null,
+    "verifier_timeout_multiplier": null,
+    "agent_setup_timeout_multiplier": null,
+    "environment_build_timeout_multiplier": null,
+    "agent": {
+        "name": null,
+        "import_path": "libs.terminus_agent.agents.terminus_2.harbor_terminus_2_skills:HarborTerminus2WithSkills",
+        "model_name": "openrouter/qwen/qwen3.5-35b-a3b",
+        "override_timeout_sec": null,
+        "override_setup_timeout_sec": null,
+        "max_timeout_sec": null,
+        "kwargs": {
+            "api_base": "https://openrouter.ai/api/v1",
+            "api_key": "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"
+        },
+        "env": {}
+    },
+    "environment": {
+        "type": "docker",
+        "import_path": null,
+        "force_build": true,
+        "delete": true,
+        "override_cpus": null,
+        "override_memory_mb": null,
+        "override_storage_mb": null,
+        "override_gpus": null,
+        "suppress_override_warnings": false,
+        "kwargs": {}
+    },
+    "verifier": {
+        "override_timeout_sec": null,
+        "max_timeout_sec": null,
+        "disable": false
+    },
+    "artifacts": [],
+    "job_id": "ce1cbef5-6f33-48d4-ad82-cb70eaf3dc74"
+}

@@ -1,0 +1,103 @@
+{
+    "id": "3fca7379-4e0f-45c3-88c9-6e139a05eef2",
+    "task_name": "fix-erlang-ssh-cve",
+    "trial_name": "fix-erlang-ssh-cve__2v8XoDe",
+    "trial_uri": "file:///Users/zhengxi.li/Documents/research/agent_eval/harbor/jobs/2026-03-12__23-23-51/fix-erlang-ssh-cve__2v8XoDe",
+    "task_id": {
+        "path": "datasets/skillsbench/tasks/fix-erlang-ssh-cve"
+    },
+    "source": "tasks",
+    "task_checksum": "e4fb21020d0fa4dc1b268fad97f5236cc1f5f64c16a4a819cea87ce4b8c2219a",
+    "config": {
+        "task": {
+            "path": "datasets/skillsbench/tasks/fix-erlang-ssh-cve",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "fix-erlang-ssh-cve__2v8XoDe",
+        "trials_dir": "jobs/2026-03-12__23-23-51",
+        "timeout_multiplier": 3.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.terminus_agent.agents.terminus_2.harbor_terminus_2_skills:HarborTerminus2WithSkills",
+            "model_name": "openrouter/openai/gpt-oss-120b",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {
+                "api_base": "https://openrouter.ai/api/v1",
+                "api_key": "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"
+            },
+            "env": {}
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": true,
+            "delete": true,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "kwargs": {}
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "5c27d713-f6f9-40cf-b22a-9a04a8fbc160"
+    },
+    "agent_info": {
+        "name": "terminus-2-skills",
+        "version": "2.0.0",
+        "model_info": {
+            "name": "openai/gpt-oss-120b",
+            "provider": "openrouter"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 89689,
+        "n_cache_tokens": null,
+        "n_output_tokens": 4842,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": {
+            "skills_loaded": [],
+            "references_loaded": []
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-03-12T16:36:32.888403Z",
+    "finished_at": "2026-03-12T16:54:52.633018Z",
+    "environment_setup": {
+        "started_at": "2026-03-12T16:36:32.897438Z",
+        "finished_at": "2026-03-12T16:42:51.959043Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-03-12T16:42:51.959056Z",
+        "finished_at": "2026-03-12T16:48:03.244579Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-03-12T16:48:03.244660Z",
+        "finished_at": "2026-03-12T16:52:15.776995Z"
+    },
+    "verifier": {
+        "started_at": "2026-03-12T16:52:15.777089Z",
+        "finished_at": "2026-03-12T16:54:50.899309Z"
+    }
+}
