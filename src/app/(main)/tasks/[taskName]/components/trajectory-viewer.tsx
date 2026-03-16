@@ -26,6 +26,8 @@ interface TrajectoryViewerProps {
   trajectoryIndex: TrajectoryIndexEntry[];
 }
 
+const TRAJECTORY_CACHE_VERSION = "2026-03-16-fulltext";
+
 export function TrajectoryViewer({ trajectoryIndex }: TrajectoryViewerProps) {
   const [selectedModelOverride, setSelectedModelOverride] = useState<string>("");
   const [selectedConditionOverride, setSelectedConditionOverride] = useState<string>("");
@@ -93,10 +95,12 @@ export function TrajectoryViewer({ trajectoryIndex }: TrajectoryViewerProps) {
     () => trials.find((trial) => trial.trialId === selectedTrialId) ?? null,
     [trials, selectedTrialId],
   );
+  const selectedCacheKey = `${selectedTrialId}::${TRAJECTORY_CACHE_VERSION}`;
 
   useEffect(() => {
     if (!selectedTrial) return;
-    if (Object.prototype.hasOwnProperty.call(trajectoryCache, selectedTrial.trialId)) return;
+    const trialCacheKey = `${selectedTrial.trialId}::${TRAJECTORY_CACHE_VERSION}`;
+    if (Object.prototype.hasOwnProperty.call(trajectoryCache, trialCacheKey)) return;
 
     const params = new URLSearchParams({
       trialId: selectedTrial.trialId,
@@ -111,20 +115,22 @@ export function TrajectoryViewer({ trajectoryIndex }: TrajectoryViewerProps) {
       reward: String(selectedTrial.reward),
       execTimeSec: String(selectedTrial.execTimeSec),
     });
+    // Bump query key when parser/format changes to bypass stale HTTP caches.
+    params.set("v", TRAJECTORY_CACHE_VERSION);
 
     let cancelled = false;
-    void fetch(`/api/trajectory?${params}`)
+    void fetch(`/api/trajectory?${params.toString()}`, { cache: "no-store" })
       .then((r) => {
         if (!r.ok) throw new Error("Not found");
         return r.json() as Promise<TrajectorySummary>;
       })
       .then((data) => {
         if (cancelled) return;
-        setTrajectoryCache((prev) => ({ ...prev, [selectedTrial.trialId]: data }));
+        setTrajectoryCache((prev) => ({ ...prev, [trialCacheKey]: data }));
       })
       .catch(() => {
         if (cancelled) return;
-        setTrajectoryCache((prev) => ({ ...prev, [selectedTrial.trialId]: null }));
+        setTrajectoryCache((prev) => ({ ...prev, [trialCacheKey]: null }));
       });
 
     return () => {
@@ -134,8 +140,8 @@ export function TrajectoryViewer({ trajectoryIndex }: TrajectoryViewerProps) {
 
   const hasTrajectoryRecord =
     selectedTrialId !== "" &&
-    Object.prototype.hasOwnProperty.call(trajectoryCache, selectedTrialId);
-  const trajectory = selectedTrialId && hasTrajectoryRecord ? trajectoryCache[selectedTrialId] : null;
+    Object.prototype.hasOwnProperty.call(trajectoryCache, selectedCacheKey);
+  const trajectory = selectedTrialId && hasTrajectoryRecord ? trajectoryCache[selectedCacheKey] : null;
   const loading = selectedTrialId !== "" && !hasTrajectoryRecord;
   const allExpanded = Boolean(
     trajectory &&

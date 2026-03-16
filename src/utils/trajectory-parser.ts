@@ -1,8 +1,9 @@
 import type { TrajectoryStep } from "./trajectory-types";
 
-const TEXT_LIMIT = 500;
-const INPUT_LIMIT = 200;
-const OUTPUT_LIMIT = 300;
+// Keep full message text so task pages can display complete LLM responses.
+const TEXT_LIMIT = Number.POSITIVE_INFINITY;
+const INPUT_LIMIT = Number.POSITIVE_INFINITY;
+const OUTPUT_LIMIT = Number.POSITIVE_INFINITY;
 
 function truncate(s: string | undefined | null, limit: number): string {
   if (!s) return "";
