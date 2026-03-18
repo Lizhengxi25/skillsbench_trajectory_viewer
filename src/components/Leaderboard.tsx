@@ -52,6 +52,7 @@ export function Leaderboard({
     google: "Gemini",
     openai: "OpenAI",
     alibaba: "Qwen",
+    nvidia: "NVIDIA",
   };
 
   const hoveredEntry = hoveredIdx !== null ? sorted[hoveredIdx] : null;

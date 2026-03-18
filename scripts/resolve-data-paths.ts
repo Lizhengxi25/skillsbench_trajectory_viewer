@@ -21,7 +21,7 @@ export function resolveHarborJobsPaths(): { jobPath: string; jobDate: string }[]
   ]);
   if (!jobsRoot) return [];
 
-  const jobDates = ["2026-03-12__23-23-51", "2026-03-13__23-23-09"];
+  const jobDates = ["2026-03-12__23-23-51", "2026-03-13__23-23-09", "2026-03-17__11-04-22"];
   const result: { jobPath: string; jobDate: string }[] = [];
   for (const jobDate of jobDates) {
     const jobPath = path.join(jobsRoot, jobDate);

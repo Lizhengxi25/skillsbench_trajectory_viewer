@@ -7,7 +7,7 @@ interface TaskResult {
   model: string;
   modelShort: string;
   harness: string;
-  family: "anthropic" | "google" | "openai" | "alibaba";
+  family: "anthropic" | "google" | "openai" | "alibaba" | "nvidia";
   condition: "No Skills" | "With Skills" | "Self-Generated";
   score: number;
   trials: number;
@@ -20,7 +20,7 @@ interface TrialRecord {
   model: string;
   modelShort: string;
   harness: string;
-  family: "anthropic" | "google" | "openai" | "alibaba";
+  family: "anthropic" | "google" | "openai" | "alibaba" | "nvidia";
   condition: "No Skills" | "With Skills" | "Self-Generated";
   reward: number;
   startedAt: string;
@@ -32,7 +32,7 @@ function normalizeModel(agentName: string, modelName: string, importPath?: strin
   harness: string;
   model: string;
   modelShort: string;
-  family: "anthropic" | "google" | "openai" | "alibaba";
+  family: "anthropic" | "google" | "openai" | "alibaba" | "nvidia";
 } | null {
   // Harbor Terminus-2 agents (identified by import_path when agent.name is null)
   if (importPath?.includes("terminus_2_skills") || agentName === "terminus-2-skills") {
@@ -41,6 +41,9 @@ function normalizeModel(agentName: string, modelName: string, importPath?: strin
     }
     if (modelName.includes("qwen3.5") || modelName.includes("qwen/qwen3.5")) {
       return { harness: "Terminus-2", model: "Terminus-2 (Qwen3.5-35B)", modelShort: "Qwen3.5-35B", family: "alibaba" };
+    }
+    if (modelName.includes("nemotron-3-super-120b-a12b") || modelName.includes("nvidia/nemotron")) {
+      return { harness: "Terminus-2", model: "Terminus-2 (Nemotron-3 120B)", modelShort: "Nemotron-3 120B", family: "nvidia" };
     }
   }
   if (agentName === "claude-code") {

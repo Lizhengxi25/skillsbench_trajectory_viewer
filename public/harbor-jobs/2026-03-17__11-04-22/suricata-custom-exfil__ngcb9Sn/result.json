@@ -1,0 +1,106 @@
+{
+    "id": "03e07bab-6794-4d4a-8e16-2e980393a4ee",
+    "task_name": "suricata-custom-exfil",
+    "trial_name": "suricata-custom-exfil__ngcb9Sn",
+    "trial_uri": "file:///Users/zhengxi.li/Documents/research/agent_eval/harbor/jobs/2026-03-17__11-04-22/suricata-custom-exfil__ngcb9Sn",
+    "task_id": {
+        "path": "datasets/skillsbench/tasks/suricata-custom-exfil"
+    },
+    "source": "tasks",
+    "task_checksum": "8fab26fb6fbb6a25049509b883025fba3af4352363cf9b93e5fab319308f61c9",
+    "config": {
+        "task": {
+            "path": "datasets/skillsbench/tasks/suricata-custom-exfil",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "suricata-custom-exfil__ngcb9Sn",
+        "trials_dir": "jobs/2026-03-17__11-04-22",
+        "timeout_multiplier": 3.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.terminus_agent.agents.terminus_2.harbor_terminus_2_skills:HarborTerminus2WithSkills",
+            "model_name": "nvidia/nemotron-3-super-120b-a12b",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {
+                "api_base": "https://integrate.api.nvidia.com/v1",
+                "api_key": "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"
+            },
+            "env": {}
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": true,
+            "delete": true,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "kwargs": {}
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "070b90f7-b8f6-4311-b2d2-01f2bcf41d48"
+    },
+    "agent_info": {
+        "name": "terminus-2-skills",
+        "version": "2.0.0",
+        "model_info": {
+            "name": "nemotron-3-super-120b-a12b",
+            "provider": "nvidia"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 1186623,
+        "n_cache_tokens": null,
+        "n_output_tokens": 10913,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": {
+            "skills_loaded": [
+                "suricata-rules-basics"
+            ],
+            "references_loaded": [],
+            "reasoning_episodes": 31
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-03-17T07:55:24.219846Z",
+    "finished_at": "2026-03-17T08:39:51.408921Z",
+    "environment_setup": {
+        "started_at": "2026-03-17T07:55:24.222466Z",
+        "finished_at": "2026-03-17T08:00:27.879390Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-03-17T08:00:27.879448Z",
+        "finished_at": "2026-03-17T08:00:46.552040Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-03-17T08:00:46.552133Z",
+        "finished_at": "2026-03-17T08:38:34.810869Z"
+    },
+    "verifier": {
+        "started_at": "2026-03-17T08:38:34.811192Z",
+        "finished_at": "2026-03-17T08:39:49.757904Z"
+    }
+}

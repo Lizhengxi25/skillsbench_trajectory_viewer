@@ -98,7 +98,7 @@ export async function GET(request: NextRequest) {
     model: searchParams.get("model") || "",
     modelShort: searchParams.get("modelShort") || "",
     harness: searchParams.get("harness") || "",
-    family: (searchParams.get("family") as "anthropic" | "google" | "openai" | "alibaba") || "anthropic",
+    family: (searchParams.get("family") as "anthropic" | "google" | "openai" | "alibaba" | "nvidia") || "anthropic",
     condition: (searchParams.get("condition") as "No Skills" | "With Skills" | "Self-Generated") || "No Skills",
     reward: parseFloat(searchParams.get("reward") || "0"),
     execTimeSec: parseInt(searchParams.get("execTimeSec") || "0", 10),

@@ -5,7 +5,7 @@ export type SortKey = "raw" | "with_skills" | "normalized_delta";
 export interface LeaderboardEntry {
   harness: string;
   model: string;
-  family: "anthropic" | "google" | "openai" | "alibaba";
+  family: "anthropic" | "google" | "openai" | "alibaba" | "nvidia";
   noSkills: number;
   noSkillsCi: number;
   withSkills: number;
@@ -23,6 +23,7 @@ export const BRAND_COLORS: Record<string, string> = {
   google: "#4285F4",
   openai: "#10A37F",
   alibaba: "#FF6A00",
+  nvidia: "#76B900",
 };
 
 export const SORT_OPTIONS: { key: SortKey; label: string }[] = [
@@ -35,7 +36,7 @@ interface TaskResult {
   task: string;
   model: string;
   harness: string;
-  family: "anthropic" | "google" | "openai" | "alibaba";
+  family: "anthropic" | "google" | "openai" | "alibaba" | "nvidia";
   condition: "No Skills" | "With Skills" | "Self-Generated";
   trials: number;
   passCount: number;
@@ -65,7 +66,7 @@ export const leaderboardData: LeaderboardEntry[] = (() => {
   const byModel = new Map<string, {
     model: string;
     harness: string;
-    family: "anthropic" | "google" | "openai" | "alibaba";
+    family: "anthropic" | "google" | "openai" | "alibaba" | "nvidia";
     noSkills: ConditionStats;
     withSkills: ConditionStats;
     gen: ConditionStats;

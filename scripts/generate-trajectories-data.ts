@@ -8,7 +8,7 @@ interface IndexEntry {
   model: string;
   modelShort: string;
   harness: string;
-  family: "anthropic" | "google" | "openai" | "alibaba";
+  family: "anthropic" | "google" | "openai" | "alibaba" | "nvidia";
   condition: "No Skills" | "With Skills" | "Self-Generated";
   reward: number;
   execTimeSec: number;
@@ -19,11 +19,12 @@ interface IndexEntry {
 const EXCLUDED_TASKS = new Set(["fix-visual-stability"]);
 
 function normalizeModel(agentName: string, modelName: string, importPath?: string): {
-  harness: string; model: string; modelShort: string; family: "anthropic" | "google" | "openai" | "alibaba";
+  harness: string; model: string; modelShort: string; family: "anthropic" | "google" | "openai" | "alibaba" | "nvidia";
 } | null {
   if (importPath?.includes("terminus_2_skills") || agentName === "terminus-2-skills") {
     if (modelName.includes("gpt-oss-120b")) return { harness: "Terminus-2", model: "Terminus-2 (GPT-oss-120B)", modelShort: "GPT-oss-120B", family: "openai" };
     if (modelName.includes("qwen3.5") || modelName.includes("qwen/qwen3.5")) return { harness: "Terminus-2", model: "Terminus-2 (Qwen3.5-35B)", modelShort: "Qwen3.5-35B", family: "alibaba" };
+    if (modelName.includes("nemotron-3-super-120b-a12b") || modelName.includes("nvidia/nemotron")) return { harness: "Terminus-2", model: "Terminus-2 (Nemotron-3 120B)", modelShort: "Nemotron-3 120B", family: "nvidia" };
   }
   if (agentName === "claude-code") {
     if (modelName.includes("opus-4-5") || modelName.includes("opus-4.5")) return { harness: "Claude Code", model: "Claude Code (Opus 4.5)", modelShort: "Opus 4.5", family: "anthropic" };

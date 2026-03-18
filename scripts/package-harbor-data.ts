@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-const JOB_DATES = ["2026-03-12__23-23-51", "2026-03-13__23-23-09"];
+const JOB_DATES = ["2026-03-12__23-23-51", "2026-03-13__23-23-09", "2026-03-17__11-04-22"];
 
 const FILES_TO_COPY = [
   "config.json",

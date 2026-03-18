@@ -12,7 +12,7 @@ import type { TrajectoryIndexEntry } from "@/utils/trajectory-types";
 export interface SampleTrajectory {
   model: string;
   harness: string;
-  family: "anthropic" | "google" | "openai" | "alibaba";
+  family: "anthropic" | "google" | "openai" | "alibaba" | "nvidia";
   taskName: string;
   condition: string;
   result: "pass" | "fail";

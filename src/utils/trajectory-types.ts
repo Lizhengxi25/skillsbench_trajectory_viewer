@@ -18,7 +18,7 @@ export interface TrajectorySummary {
   model: string;
   modelShort: string;
   harness: string;
-  family: "anthropic" | "google" | "openai" | "alibaba";
+  family: "anthropic" | "google" | "openai" | "alibaba" | "nvidia";
   condition: "No Skills" | "With Skills" | "Self-Generated";
   reward: number;
   execTimeSec: number;
@@ -32,7 +32,7 @@ export interface TrajectoryIndexEntry {
   model: string;
   modelShort: string;
   harness: string;
-  family: "anthropic" | "google" | "openai" | "alibaba";
+  family: "anthropic" | "google" | "openai" | "alibaba" | "nvidia";
   condition: "No Skills" | "With Skills" | "Self-Generated";
   reward: number;
   execTimeSec: number;
@@ -47,7 +47,7 @@ export interface TaskResult {
   model: string;
   modelShort: string;
   harness: string;
-  family: "anthropic" | "google" | "openai" | "alibaba";
+  family: "anthropic" | "google" | "openai" | "alibaba" | "nvidia";
   condition: "No Skills" | "With Skills" | "Self-Generated";
   score: number;
   trials: number;

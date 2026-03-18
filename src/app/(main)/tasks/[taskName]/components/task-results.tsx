@@ -30,7 +30,7 @@ export function TaskResults({ results }: TaskResultsProps) {
     model: string;
     modelShort: string;
     harness: string;
-    family: "anthropic" | "google" | "openai" | "alibaba";
+    family: "anthropic" | "google" | "openai" | "alibaba" | "nvidia";
     noSkills?: TaskResult;
     withSkills?: TaskResult;
     selfGenerated?: TaskResult;
@@ -61,7 +61,7 @@ export function TaskResults({ results }: TaskResultsProps) {
   const maxScore = Math.max(
     ...models.map((m) => Math.max(m.noSkills?.score ?? 0, m.withSkills?.score ?? 0))
   );
-  const familyOrder = ["anthropic", "google", "openai", "alibaba"] as const;
+  const familyOrder = ["anthropic", "google", "openai", "alibaba", "nvidia"] as const;
   const uniqueFamilies = familyOrder.filter((family) =>
     models.some((entry) => entry.family === family)
   );
@@ -70,6 +70,7 @@ export function TaskResults({ results }: TaskResultsProps) {
     google: "Gemini CLI",
     openai: "Codex",
     alibaba: "Terminus-2 (Qwen)",
+    nvidia: "Terminus-2 (Nemotron)",
   };
 
   return (

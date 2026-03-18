@@ -1,0 +1,108 @@
+{
+    "id": "32a18071-b87f-4997-bc69-288ebc3512ae",
+    "task_name": "find-topk-similiar-chemicals",
+    "trial_name": "find-topk-similiar-chemicals__dA3teNF",
+    "trial_uri": "file:///Users/zhengxi.li/Documents/research/agent_eval/harbor/jobs/2026-03-17__11-04-22/find-topk-similiar-chemicals__dA3teNF",
+    "task_id": {
+        "path": "datasets/skillsbench/tasks/find-topk-similiar-chemicals"
+    },
+    "source": "tasks",
+    "task_checksum": "d5bc77313b46ee2d1e3b2d0c23e8748d23b7e95efe88ca13222b4c1dcc7d695b",
+    "config": {
+        "task": {
+            "path": "datasets/skillsbench/tasks/find-topk-similiar-chemicals",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "find-topk-similiar-chemicals__dA3teNF",
+        "trials_dir": "jobs/2026-03-17__11-04-22",
+        "timeout_multiplier": 3.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": null,
+            "import_path": "libs.terminus_agent.agents.terminus_2.harbor_terminus_2_skills:HarborTerminus2WithSkills",
+            "model_name": "nvidia/nemotron-3-super-120b-a12b",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {
+                "api_base": "https://integrate.api.nvidia.com/v1",
+                "api_key": "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"
+            },
+            "env": {}
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": true,
+            "delete": true,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "kwargs": {}
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "070b90f7-b8f6-4311-b2d2-01f2bcf41d48"
+    },
+    "agent_info": {
+        "name": "terminus-2-skills",
+        "version": "2.0.0",
+        "model_info": {
+            "name": "nemotron-3-super-120b-a12b",
+            "provider": "nvidia"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 425743,
+        "n_cache_tokens": null,
+        "n_output_tokens": 11862,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": {
+            "skills_loaded": [
+                "pdf",
+                "pubchem-database",
+                "rdkit"
+            ],
+            "references_loaded": [],
+            "reasoning_episodes": 31
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-03-17T14:26:33.698270Z",
+    "finished_at": "2026-03-17T15:13:20.623808Z",
+    "environment_setup": {
+        "started_at": "2026-03-17T14:26:33.708139Z",
+        "finished_at": "2026-03-17T14:28:50.169608Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-03-17T14:28:50.169659Z",
+        "finished_at": "2026-03-17T14:28:50.840866Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-03-17T14:28:50.840936Z",
+        "finished_at": "2026-03-17T15:13:13.292712Z"
+    },
+    "verifier": {
+        "started_at": "2026-03-17T15:13:13.292985Z",
+        "finished_at": "2026-03-17T15:13:18.947765Z"
+    }
+}
